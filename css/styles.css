@@ -1,0 +1,281 @@
+/***** html tags *****/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1px;
+}
+a{
+    color: hsl(273, 4%, 51%);
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 500;
+}
+a:hover{
+    color: hsl(256, 26%, 20%);
+}
+hr{
+    width: 100px;
+    border-width: 2px 0 0 0;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+h1,h2,h3{
+    font-family: 'DM Serif Display', serif;
+}
+h1{
+    font-size: 4rem;
+    width: 70%;
+    padding-bottom: 50px;
+}
+h2{
+    color: hsl(270, 9%, 17%);
+}
+h4{
+    margin-bottom: 30px;
+    color: hsl(273, 4%, 51%);
+}
+h5{
+    line-height: 1.5;
+    color: hsl(270, 9%, 17%);
+}
+button{
+    font-family: 'Karla', sans-serif;
+    padding: 8px 16px;
+    background-color: hsl(0, 0%, 98%);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/**** classes *****/
+.navbar, .intro-wrapper, .process-wrapper, .how-we-work, .footer-logo, .about{
+    display: flex;
+}
+.navbar{
+    padding: 30px 100px;
+}
+.navbar img{
+    margin-right: 60%;
+}
+.navbar button{
+    border-color: hsl(270, 9%, 17%);
+    color: hsl(270, 9%, 17%);
+}
+.navbar button:hover{
+    background-color: hsl(256, 26%, 20%);
+    color: hsl(0, 0%, 98%);
+}
+.ham-icon{
+    display: none;
+}
+.close-icon{
+    display: none;
+}
+
+.intro-pattern-right-mob{
+    display: none;
+}
+.intro-pattern-right{
+    position: absolute;
+    right: 0;
+    top: 96px;
+}
+.intro-pattern-left{
+    position: absolute;
+    left: 0;
+    top: 75%;
+}
+.intro-wrapper{
+    background-color: hsl(256, 26%, 20%);
+    color: hsl(0, 0%, 98%);
+    padding-left:100px;
+}
+.intro-wrapper p{
+    width: 90%;
+    margin-bottom: 30px;
+}
+.intro-img-desktop{
+    margin: 100px 120px -100px 0;
+}
+.intro-img-mob{
+    display: none;
+}
+.intro-wrapper button, .how-we-work button{
+    border-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(256, 26%, 20%);
+}
+.intro-wrapper button:hover, .how-we-work button:hover{
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(256, 26%, 20%);
+}
+
+
+.we-are-different-hr{
+    margin: 200px 0 50px 100px; 
+    border-color: hsl(256, 26%, 20%)
+}
+.we-are-different-heading{
+    margin-left: 100px; 
+    color: hsl(270, 9%, 17%);
+}
+
+
+.process-wrapper{
+    padding: 0px 120px 100px 100px;
+}
+.process-wrapper img, .process-wrapper h2{
+    margin-bottom: 30px;
+}
+.process-wrapper p{
+    width: 95%;
+    color: hsl(273, 4%, 51%);
+}
+
+
+.how-we-work{
+    background: url("../images/bg-pattern-how-we-work-desktop.svg") no-repeat right;
+    justify-content: space-between;
+    margin: 0 120px 0 100px;
+    background-color: hsl(256, 26%, 20%);
+    color: hsl(0, 0%, 98%);
+    padding: 20px 50px;
+}
+.how-we-work button{
+    margin-top: 50px;
+}
+
+
+.footer{
+    background: url("../images/bg-pattern-footer-desktop.svg") no-repeat left top;
+    background-color: hsl(0, 0%, 98%);
+    margin-top: 150px;
+    padding: 50px 120px 50px 100px;
+}
+.icons:hover{
+    filter: invert(13%) sepia(36%) saturate(687%) hue-rotate(215deg) brightness(96%) contrast(93%);
+}
+.footer hr{
+    width: auto;
+}
+.footer-logo, .about{
+    justify-content: space-between;
+}
+.about{
+    padding-right: 200px;
+}
+
+/***** media queries *****/
+@media screen and (max-width: 600px){
+    .navbar{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .ham-icon{
+        display: inline;
+    }
+    .nav-items{
+        display: none;
+    }
+    .nav-show{
+        line-height: 3;
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+        background: url("../images/bg-pattern-mobile-nav.svg") no-repeat bottom;
+        background-color:  hsl(256, 26%, 20%);
+        height: 600px;
+    }
+    .nav-show a{
+        display: block;
+        color: hsl(0, 0%, 98%);
+    }
+    .nav-show button{
+        border-color: hsl(0, 0%, 98%);
+        color: hsl(0, 0%, 98%);
+        background-color: hsl(256, 26%, 20%);
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .intro-wrapper{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    .intro-heading-wrapper{
+        background: url("../images/bg-pattern-intro-left-mobile.svg") top left no-repeat;
+    }
+    .intro-wrapper hr{
+        display: none;
+    }
+    h1, .intro-wrapper p{
+        width: auto;
+    }
+    .intro-wrapper button{
+        margin-bottom: 50px;
+    }
+    .intro-pattern-right, .intro-pattern-left{
+        display: none;
+    }
+    .intro-img-desktop{
+        display: none;
+    }
+    .intro-img-mob{
+        display: inline;
+    }
+    .intro-pattern-right-mob{
+        display: inline;
+        position: absolute;
+        right: 0;
+        top: 140%;
+    }
+
+    .we-are-different-hr{
+        margin-top: 100px;
+        text-align: center;
+    }
+    .we-are-different-heading{
+        margin: 0;
+        text-align: center;
+    }
+
+    .process-wrapper{
+        padding: 0;
+        text-align: center;
+        flex-direction: column;
+    }
+    .process-wrapper p{
+        margin-bottom: 50px;
+    }
+
+    .how-we-work{
+        margin: 0;
+        flex-direction: column;
+        text-align: center;
+        background-position:top right 200%;
+    }
+    .how-we-work h1{
+        font-size: 2rem;
+    }
+    .how-we-work button{
+        margin: 0;
+    }
+
+    .footer{
+        text-align: center;
+    }
+    .footer-logo, .about{
+        flex-direction: column;
+    }
+    .foot-logo-img{
+        margin-bottom: 50px;
+    }
+    .about{
+        padding: 0;
+    }
+
+}
